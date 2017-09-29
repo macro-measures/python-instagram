@@ -28,7 +28,8 @@ class ApiModel(object):
 
 class Image(ApiModel):
 
-    def __init__(self, url, width, height):
+    def __init__(self, url, width, height, id=None):
+        """Sometimes an ID is passed in, but we don't need to store it yet."""
         self.url = url
         self.height = height
         self.width = width
